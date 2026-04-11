@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Анимация линии</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preload" href="font/stylesheet.css" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+
+  <div class="main_wrapper">
+
+    <div class="main_wrapper-top">
+      <img src="img/convert_top.webp" alt="">
+      <div class="center_item">Вы приглашены<br><span class="text">на свадьбу</span></div>
+    </div>
+    <div class="main_wrapper-center">
+      <svg width="690" height="409" viewBox="0 0 690 409" fill="none">
+        <path id="myPath"
+          d="M118.489 369.511C238.822 244.178 511.489 3.11129 639.489 41.5113C799.489 89.5113 460.989 202.011 275.989 187.011C90.989 172.011 -81.0111 10.5113 59.4889 8.01129C171.889 6.01129 464.322 270.178 596.489 402.511"
+          stroke="#331B0B" stroke-width="16" fill="none" stroke-linecap="round" />
+      </svg>
+      <div id="eraseBtn">
+        <img src="img/btn.png" alt="">
+      </div>
+    </div>
+    <div class="main_wrapper-bottom">
+      <div class="main_wrapper-bottom-text center_item">
+        Вы не просто так получили это приглашение! В этот особенный день мы очень хотим чтобы вы были рядом!
+      </div>
+      <img src="img/convert_down.webp" alt="">
+    </div>
+
+  </div>
+
+  <div class="main_content">
+    <div class="border_container">
+      <img class="center_item" src="img/border.png" style="pointer-events: none;">
+      <div class="border_wrapper">
+        <img src="img/names.png" alt="">
+        <div>Скоро наступит очень важный для нас день - мы станем семьей!</div>
+        <div style="font-size: 40px;">27.06.26</div>
+      </div>
+    </div>
+
+    <div class="image">
+      <img src="img/5U8A2552.jpg" alt="">
+    </div>
+
+    <div>
+      <h2>
+        Дорогие гости!
+      </h2>
+      <p>Мы очень хотим сделать этот день особенным, поэтому приглашаем Вас разделить с нами торжество,посвящённое дню
+        нашей свадьбы!</p>
+    </div>
+
+    <div class="date-day-container">
+      <h2>
+        Наш июнь
+      </h2>
+      <div class="date_time-container">
+        <div class="date_time-item">25</div>
+        <div class="date_time-item">26</div>
+        <div><img src="img/heart.svg" alt=""></div>
+        <div class="date_time-item">28</div>
+        <div class="date_time-item">29</div>
+      </div>
+
+      <div class="line_container">
+        <div class="svg-container" style="transform: translate(60px);">
+          <!-- <svg width="343" height="1677" viewBox="0 0 343 1677" fill="none">
+            <path id="sPath"
+              d="M146 0.405518C146 0.405518 108.065 85.614 123.565 156.114C139.065 226.614 341.065 243.614 341.065 373.114C341.065 502.614 -4.43502 450.114 1.06498 631.614C6.56498 813.114 341.065 748.614 341.065 916.614C341.065 1084.61 1.065 1078.11 1.065 1238.11C1.065 1398.11 335.065 1334.11 341.065 1491.61C341.065 1555.11 283.565 1645.11 208.565 1675.61"
+              stroke="#331B0B" stroke-width="2" fill="none" />
+          </svg> -->
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="343" height="1745" viewBox="0 0 343 1745" fill="none">
+            <path id="sPath"
+              d="M146 0.405518C146 0.405518 108.065 85.614 123.565 156.114C139.065 226.614 341.065 243.614 341.065 373.114C341.065 502.614 -4.43502 450.114 1.06498 631.614C6.56498 813.114 341.065 748.614 341.065 916.614C341.065 1084.61 1.065 1078.11 1.065 1238.11C1.065 1398.11 335.065 1334.11 341.065 1491.61C341.065 1555.11 230 1712.91 155 1743.41"
+              stroke="#331B0B" stroke-width="2" />
+          </svg>
+        </div>
+        <div class="heart-icon">
+          <img src="img/heart.png" style="transform: translate(-279%, -30px);" alt="heart">
+        </div>
+        <div class="event-container">
+          <div class="events-item">
+            <img src="img/glass.png" alt="Сбор гостей">
+            <span class="event-item-name text">Сбор гостей</span>
+            <span class="event-item-time">14:30</span>
+          </div>
+          <div class="events-item">
+            <img src="img/ceremonia.jpg" alt="Церемония">
+            <span class="event-item-name text">Церемония</span>
+            <span class="event-item-time">15:30</span>
+          </div>
+          <div class="events-item">
+            <img src="img/pork.png" alt="Банкет">
+            <span class="event-item-name text">Банкет</span>
+            <span class="event-item-time">16:00</span>
+          </div>
+          <div class="events-item">
+            <img src="img/cake.png" alt="Торт">
+            <span class="event-item-name text">Торт</span>
+            <span class="event-item-time">21:00</span>
+          </div>
+          <div class="events-item">
+            <img src="img/end.jpg" alt="Завершение">
+            <span class="event-item-name text">Завершение</span>
+            <span class="event-item-time">23:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="border_container">
+        <img class="center_item" src="img/border1.png" style="pointer-events: none;">
+        <div class="border_wrapper" style="margin-top: -10px;">
+          <h2>Локация</h2>
+          <div>
+            <div style="font-size: 40px;">Ресторан «ТАНГО»</div>
+            <div>c. Кулунда, ул.Ленина 6Б</div>
+          </div>
+          <a href="ya.ru" class="btn" target="_blank">Открыть карту</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="timer-container">
+      <h2 style="line-height: 60px;">Мы скажем<br>“Да” через...</h2>
+
+      <div class="timer" id="timer">00:00:00:00</div>
+
+      <img src="img/rings.png" alt="">
+    </div>
+
+    <div class="dress_code-container">
+      <h2>Дресс - код</h2>
+      <p>Мы создаем наш свадебный день с особым трепетом. И нам будет очень приятно если вы поддержите цветовую гамму:</p>
+      <div class="dress_code-wrapper">
+        <img src="img/cloth.png" alt="">
+        <img src="img/cloth1.png" alt="">
+        <img src="img/cloth2.png" alt="">
+        <img src="img/cloth3.png" alt="">
+        <img src="img/cloth4.png" alt="">
+      </div>
+    </div>
+
+    <div class="image">
+      <img src="img/5U8A2138.jpg" alt="">
+    </div>
+
+
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
