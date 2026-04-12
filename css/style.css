@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Passions Conflict RUS';
+    src: url('font/PassionsConflictRUS.woff2') format('woff2'),
+        url('font/PassionsConflictRUS.woff') format('woff'),
+        url('font/PassionsConflictRUS.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     text-align: center;
     padding: 50px;
@@ -6,7 +16,6 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 26px;
     font-weight: 200;
-    overflow: hidden;
     background-color: #EBE1D7;
     color: #331B0B;
     overflow-x: hidden;

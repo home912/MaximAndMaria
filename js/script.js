@@ -31,7 +31,6 @@ $(document).ready(function () {
             // После завершения анимации скрываем блок
             setTimeout(function () {
                 $wrapper.css('display', 'none');
-                $body.css('overflow', 'auto');
             }, 500);
         }, 1000);
     });
