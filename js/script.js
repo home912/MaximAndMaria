@@ -12,6 +12,8 @@ $(document).ready(function () {
         'strokeDashoffset': 0
     });
 
+    $body.css({'overflow': 'hidden'});
+
     // Кнопка "Стереть"
     $('#eraseBtn').on('click', function () {
         // Анимация линии
@@ -28,6 +30,8 @@ $(document).ready(function () {
                 'opacity': '0'
             });
 
+            $body.css({'overflow': 'auto'});
+
             // После завершения анимации скрываем блок
             setTimeout(function () {
                 $wrapper.css('display', 'none');
@@ -35,6 +39,7 @@ $(document).ready(function () {
         }, 1000);
     });
 });
+
 $(document).ready(function() {
     var path = $('#sPath')[0];
     var length = path.getTotalLength();
