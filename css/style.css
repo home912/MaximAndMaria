@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Passions Conflict RUS';
-    src: url('font/PassionsConflictRUS.woff2') format('woff2'),
-        url('font/PassionsConflictRUS.woff') format('woff'),
-        url('font/PassionsConflictRUS.ttf') format('truetype');
+    src: url('../font/PassionsConflictRUS.woff2') format('woff2'),
+        url('../font/PassionsConflictRUS.woff') format('woff'),
+        url('../font/PassionsConflictRUS.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
