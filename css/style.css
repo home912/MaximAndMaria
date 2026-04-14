@@ -224,3 +224,57 @@ svg {
     width: 100px;
     margin-left: -20px;
 }
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .main_content {
+        max-width: 70%;
+        margin: 0 auto;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .border_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 80%;
+        margin: 0 auto;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .dress_code-wrapper img {
+        width: 68px;
+        margin-left: -20px;
+    }
+
+    .svg-container {
+        transform: unset !important;
+
+    }
+
+    .events-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        mix-blend-mode: darken;
+        transform: translate(-25%, 0);
+    }
+
+    .events-item:nth-child(even) {
+        transform: translate(25%, 0) !important;
+    }
+
+    div {
+        font-size: 25px;
+    }
+}

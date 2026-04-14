@@ -3,10 +3,16 @@ $(document).ready(function () {
     const $wrapper = $('.main_wrapper');
     const $body = $('body');
 
+    // Проверяем существование элемента
+    if ($path.length === 0) {
+        console.error('Элемент #myPath не найден');
+        return;
+    }
+
     // Получаем длину линии
     const length = $path[0].getTotalLength();
 
-    // Настраиваем пунктир: линия полностью видна изначально
+    // Настраиваем пунктир
     $path.css({
         'strokeDasharray': length,
         'strokeDashoffset': 0
@@ -16,13 +22,11 @@ $(document).ready(function () {
 
     // Кнопка "Стереть"
     $('#eraseBtn').on('click', function () {
-        // Анимация линии
         $path.css({
             'transition': 'stroke-dashoffset 1s ease-out',
             'strokeDashoffset': length
         });
 
-        // Через 1 секунду после нажатия анимируем main_wrapper
         setTimeout(function () {
             $wrapper.css({
                 'transition': 'transform 0.5s ease-out, opacity 0.5s ease-out',
@@ -30,9 +34,8 @@ $(document).ready(function () {
                 'opacity': '0'
             });
 
-            $body.css({'overflow': 'auto'});
+            $body.css({'overflow-x': 'hidden','overflow-y': 'auto'});
 
-            // После завершения анимации скрываем блок
             setTimeout(function () {
                 $wrapper.css('display', 'none');
             }, 500);
@@ -41,22 +44,33 @@ $(document).ready(function () {
 });
 
 $(document).ready(function() {
+    // ПРОВЕРЯЕМ СУЩЕСТВОВАНИЕ ЭЛЕМЕНТА
     var path = $('#sPath')[0];
+    if (!path) {
+        console.warn('Элемент #sPath не найден, скрипт анимации линии пропущен');
+        return; // Выходим, если элемента нет
+    }
+    
     var length = path.getTotalLength();
     var $container = $('.svg-container');
     var $window = $(window);
     var $heart = $('.heart-icon');
     
-    // Изначально линия скрыта, сердечко в начале пути
+    // Проверяем остальные элементы
+    if ($container.length === 0 || $heart.length === 0) {
+        console.warn('Не найдены .svg-container или .heart-icon');
+        return;
+    }
+    
     path.style.strokeDasharray = length;
     path.style.strokeDashoffset = length;
     
-    // Устанавливаем сердечко в начало линии
     function setHeartAtProgress(progress) {
         var point = path.getPointAtLength(progress * length);
         var svg = $('svg')[0];
-        var svgRect = svg.getBoundingClientRect();
+        if (!svg) return;
         
+        var svgRect = svg.getBoundingClientRect();
         var heartX = svgRect.left + point.x;
         var heartY = svgRect.top + point.y;
         
@@ -72,27 +86,21 @@ $(document).ready(function() {
         var windowHeight = $window.height();
         var windowCenter = scrollTop + windowHeight / 2;
         
-        // Прогресс от начала линии до конца (0-1)
         var lineStart = containerTop;
         var lineEnd = containerBottom;
         
         var progress = (windowCenter - lineStart) / (lineEnd - lineStart);
         progress = Math.min(1, Math.max(0, progress));
         
-        // Рисуем линию
         var drawnLength = progress * length;
         path.style.strokeDashoffset = length - drawnLength;
-        
-        // Двигаем сердечко ровно на столько же, сколько отрисовано
         setHeartAtProgress(progress);
     }
     
-    // Запускаем при скролле
     $window.on('scroll resize', function() {
         requestAnimationFrame(update);
     });
     
-    // Запускаем при загрузке
     update();
 });
 
@@ -111,11 +119,14 @@ function updateTimer() {
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
     
-    document.getElementById('timer').textContent = 
-        String(days).padStart(2, '0') + ':' +
-        String(hours).padStart(2, '0') + ':' +
-        String(minutes).padStart(2, '0') + ':' +
-        String(seconds).padStart(2, '0');
+    const timerElement = document.getElementById('timer');
+    if (timerElement) {
+        timerElement.textContent = 
+            String(days).padStart(2, '0') + ':' +
+            String(hours).padStart(2, '0') + ':' +
+            String(minutes).padStart(2, '0') + ':' +
+            String(seconds).padStart(2, '0');
+    }
 }
 
 updateTimer();
