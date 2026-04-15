@@ -117,7 +117,7 @@ svg {
 
 .border_container {
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 .border_wrapper {
@@ -141,6 +141,8 @@ svg {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
+    bottom: -10px;
 }
 
 .date_time-item {
@@ -231,7 +233,7 @@ svg {
     }
 
     .main_content {
-        max-width: 70%;
+        max-width: 85%;
         margin: 0 auto;
         padding-top: 50px;
         display: flex;
@@ -245,7 +247,7 @@ svg {
         gap: 10px;
         max-width: 80%;
         margin: 0 auto;
-        height: 400px;
+        height: 500px;
         justify-content: center;
         align-items: center;
     }
@@ -256,10 +258,6 @@ svg {
         margin-left: -20px;
     }
 
-    .svg-container {
-        transform: unset !important;
-
-    }
 
     .events-item {
         display: flex;
@@ -276,5 +274,25 @@ svg {
 
     div {
         font-size: 25px;
+    }
+
+    .main_wrapper {
+        overflow: hidden;
+    }
+
+    .main_wrapper-top img,
+    .main_wrapper-bottom img {
+        max-width: unset;
+    }
+
+    .main_wrapper-bottom-text {
+        width: unset;
+    }
+
+    .main_wrapper-center svg {
+        scale: 0.55;
+    }
+    .heart-icon img{
+        max-width: unset;
     }
 }
