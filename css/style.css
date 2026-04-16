@@ -8,6 +8,10 @@
     font-display: swap;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     text-align: center;
     padding: 50px;
@@ -42,6 +46,7 @@ body {
 }
 
 .main_wrapper-center {
+    z-index: 9;
     top: 53%;
     transform: translate(-50%, -50%) !important;
 }
@@ -227,6 +232,11 @@ svg {
     margin-left: -20px;
 }
 
+#sPathmob,
+.heart-iconmob {
+    display: none;
+}
+
 @media (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -292,7 +302,17 @@ svg {
     .main_wrapper-center svg {
         scale: 0.55;
     }
-    .heart-icon img{
+
+    .heart-icon img {
         max-width: unset;
     }
+
+    /*  */
+
+    #sPathmob,
+    .heart-iconmob {
+        display: block;
+    }
+
+
 }
