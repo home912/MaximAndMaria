@@ -139,30 +139,33 @@ setInterval(updateTimer, 1000);
 
 
 $(document).ready(function() {
-    const $accordions = $(".accordion");
-
-    $accordions.on("click", function() {
+    $(".accordion").on("click", function() {
         const $this = $(this);
-        const isOpen = $this.hasClass("fs_active");
-
-        // Закрываем все
-        $accordions.each(function() {
-            const $acc = $(this);
-            $acc.removeClass("fs_active");
-            $acc.find(".arrow")?.removeClass("rotated");
-            $acc.find('.accordion svg path').css('stroke', '');
-            $acc.next().css('max-height', null);
-        });
-
-        // Если не была открыта — откроем
-        if (!isOpen) {
-            $this.addClass("fs_active");
-            const $arrow = $this.find(".arrow");
-            if ($arrow.length) {
-                $arrow.addClass("rotated");
-                $this.find('.accordion svg path').css('stroke', '#fff');
-            }
-            $this.next().css('max-height', $this.next()[0].scrollHeight + "px");
+        const $panel = $this.next(".panel");
+        const $arrow = $this.find(".arrow");
+        
+        // Проверяем, открыта ли текущая панель
+        const isOpen = $panel.css("max-height") !== "0px";
+        
+        if (isOpen) {
+            // Закрываем текущую
+            $panel.css("max-height", "0");
+            $arrow.css("transform", "rotate(0deg)");
+            $this.removeClass("active");
+        } else {
+            // Закрываем все остальные
+            $(".panel").each(function() {
+                $(this).css("max-height", "0");
+            });
+            $(".accordion").each(function() {
+                $(this).find(".arrow").css("transform", "rotate(0deg)");
+                $(this).removeClass("active");
+            });
+            
+            // Открываем текущую
+            $panel.css("max-height", $panel[0].scrollHeight + "px");
+            $arrow.css("transform", "rotate(90deg)");
+            $this.addClass("active");
         }
     });
 });

@@ -1,266 +1,271 @@
 @font-face {
-    font-family: 'Passions Conflict RUS';
-    src: url('../font/PassionsConflictRUS.woff2') format('woff2'),
-        url('../font/PassionsConflictRUS.woff') format('woff'),
-        url('../font/PassionsConflictRUS.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Passions Conflict RUS";
+  src:
+    url("../font/PassionsConflictRUS.woff2") format("woff2"),
+    url("../font/PassionsConflictRUS.woff") format("woff"),
+    url("../font/PassionsConflictRUS.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Anticva';
-    src: url('../font2/Anticva-Regular.woff2') format('woff2'),
-        url('../font2/Anticva-Regular.woff') format('woff'),
-        url('../font2/Anticva-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Anticva";
+  src:
+    url("../font2/Anticva-Regular.woff2") format("woff2"),
+    url("../font2/Anticva-Regular.woff") format("woff"),
+    url("../font2/Anticva-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Venski sad One';
-    src: url('../font3/VenskisadOne-Medium.woff2') format('woff2'),
-        url('../font3/VenskisadOne-Medium.woff') format('woff'),
-        url('../font3/VenskisadOne-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Venski sad One";
+  src:
+    url("../font3/VenskisadOne-Medium.woff2") format("woff2"),
+    url("../font3/VenskisadOne-Medium.woff") format("woff"),
+    url("../font3/VenskisadOne-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
-
-
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    text-align: center;
-    padding: 50px;
-    margin: 0;
-    padding: 0;
-    font-family: "Anticva";
-    font-size: 26px;
-    background-color: #EBE1D7;
-    color: #331B0B;
-    overflow-x: hidden;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+  padding: 0;
+  font-family: "Anticva";
+  font-size: 26px;
+  background-color: #ebe1d7;
+  color: #331b0b;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: "Anticva" !important;
 }
 
 .center_item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main_wrapper {
-    position: relative;
-    z-index: 99;
-    width: 100vw;
-    height: 100vh;
-    background-color: #533329;
-    color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background-color: #533329;
+  color: #fff;
 }
 
 .main_wrapper-top {
-    top: 0;
+  top: 0;
 }
 
 .main_wrapper-center {
-    z-index: 9;
-    top: 53%;
-    transform: translate(-50%, -50%) !important;
+  z-index: 9;
+  top: 53%;
+  transform: translate(-50%, -50%) !important;
 }
 
 .main_wrapper-bottom {
-    bottom: 0;
+  bottom: 0;
 }
 
 h2,
 .text {
-    font-family: 'Venski sad One' !important;
-    font-size: 70px !important;
-    line-height: 30px;
-    font-weight: 400;
+  font-family: "Venski sad One" !important;
+  font-size: 70px !important;
+  line-height: 30px;
+  font-weight: 400;
 }
 
 h2 {
-    font-size: 100px !important;
-    margin: 0.5em 0;
+  font-size: 100px !important;
+  margin: 0.5em 0;
 }
 
 .main_wrapper-bottom-text {
-    width: 540px;
+  width: 540px;
 }
-
 
 .main_wrapper-center,
 .main_wrapper-top,
 .main_wrapper-bottom {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 #eraseBtn {
-    cursor: pointer;
-    width: 100px;
-    height: auto;
-    position: absolute;
-    top: 44%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 svg {
-    display: block;
+  display: block;
 }
 
 .btn {
-    border: 1px solid #331B0B;
-    border-radius: 20px;
-    color: #331B0B;
-    background-color: transparent;
-    width: fit-content;
-    padding: 15px 40px;
-    text-decoration: none;
+  border: 1px solid #331b0b;
+  border-radius: 20px;
+  color: #331b0b;
+  background-color: transparent;
+  width: fit-content;
+  padding: 15px 40px;
+  text-decoration: none;
 }
 
 /* MAIN CONTENT */
 
 .main_content {
-    max-width: 500px;
-    margin: 0 auto;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .border_container {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .border_wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 400px;
-    margin: 0 auto;
-    height: 700px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
 }
 
 .image img {
-    border-radius: 40px;
-    max-width: 80%;
+  border-radius: 40px;
+  max-width: 80%;
 }
 
 /* Даты */
 .date_time-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    bottom: -10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  bottom: -10px;
 }
 
 .date_time-item {
-    border: 1px solid #331B0B;
-    border-radius: 10px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    padding: 20px;
+  border: 1px solid #331b0b;
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  padding: 20px;
 }
 
 .date_time-item:last-child,
 .date_time-item:first-child {
-    scale: .9;
-    opacity: .5;
+  scale: 0.9;
+  opacity: 0.5;
 }
 
 .line_container {
-    display: flex;
-    justify-content: center;
-    margin-top: -40px;
+  display: flex;
+  justify-content: center;
+  margin-top: -40px;
 }
 
 /* Эвенты */
 
 .event-container {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 52px;
-    margin-top: 213px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  margin-top: 213px;
 }
 
 .events-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    mix-blend-mode: darken;
-    transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  mix-blend-mode: darken;
+  transform: translate(-50%, 0);
 }
 
 .events-item:nth-child(even) {
-    transform: translate(50%, 0) !important;
+  transform: translate(50%, 0) !important;
 }
 
 .events-item img {
-    max-width: 140px;
+  max-width: 140px;
 }
 
 .events-item-name {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .event-item-time {
-    font-size: 32px !important;
-    margin-top: 15px;
+  font-size: 32px !important;
+  margin-top: 15px;
 }
 
-
 .timer-container img {
-    max-width: 300px;
-    mix-blend-mode: darken;
+  max-width: 300px;
+  mix-blend-mode: darken;
 }
 
 .timer {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 /* Dress code */
 
 .dress_code-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .dress_code-wrapper img {
-    width: 100px;
-    margin-left: -20px;
+  width: 100px;
+  margin-left: -20px;
 }
 
 #sPathmob,
 .heart-iconmob {
-    display: none;
+  display: none;
 }
 
-
 /* Аккордеон */
-
 
 /* аккордеон */
 
@@ -288,9 +293,9 @@ svg {
   justify-content: space-between;
   background-color: transparent;
   border: none;
-  border: solid 1px #006048;
-  background-color: #fff;
-  color: #006048;
+  border: solid 1px #331b0b;
+  background-color: #ebe1d7;
+  color: #331b0b;
   font-weight: bold;
   cursor: pointer;
   padding: 18px;
@@ -303,8 +308,7 @@ svg {
 
 .active,
 .accordion:hover {
-  color: #fff;
-  background-color: #006048;
+  background-color: #ebe1d7;
 }
 
 .panel {
@@ -314,6 +318,7 @@ svg {
   overflow: hidden;
   border-radius: 20px;
   transition: max-height 0.4s ease-out;
+  font-size: 18px;
 }
 
 .arrow {
@@ -329,103 +334,141 @@ svg {
   transition: 0.2s;
 }
 
-.accordion:hover svg path {
-  stroke: #fff;
-}
-
 .arrow.rotated {
   transform: rotate(90deg);
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery-item {
+  flex: 0 0 45%;
+  border-radius: 40px;
+  overflow: clip;
+  position: relative;
+}
+
+.gallery-item::before {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  padding: 10px 10px;
+  background: #0000008a;
+  color: #fff;
+}
+
+.gallery-item-1::before {
+  content: "+7(913)466-78-56";
+}
+
+.gallery-item-2::before {
+  content: "+7(923)465-45-89";
+}
+
+.gallery-item-3::before {
+  content: "+7(985)456-12-56";
+}
+
+.gallery-item img {
+  display: block;
+}
 
 @media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
+  body {
+    overflow-x: hidden;
+  }
 
-    .main_content {
-        max-width: 85%;
-        margin: 0 auto;
-        padding-top: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-    }
+  .main_content {
+    max-width: 85%;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
 
-    .border_wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        max-width: 80%;
-        margin: 0 auto;
-        height: 500px;
-        justify-content: center;
-        align-items: center;
-    }
+  .border_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .dress_code-wrapper img {
+    width: 68px;
+    margin-left: -20px;
+  }
 
-    .dress_code-wrapper img {
-        width: 68px;
-        margin-left: -20px;
-    }
+  .events-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    mix-blend-mode: darken;
+    transform: translate(-25%, 0);
+  }
 
+  .events-item:nth-child(even) {
+    transform: translate(25%, 0) !important;
+  }
 
-    .events-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        mix-blend-mode: darken;
-        transform: translate(-25%, 0);
-    }
+  div {
+    font-size: 25px;
+  }
 
-    .events-item:nth-child(even) {
-        transform: translate(25%, 0) !important;
-    }
+  .date_time-item {
+    border: 1px solid #331b0b;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    padding: 20px;
+  }
 
-    div {
-        font-size: 25px;
-    }
+  .main_wrapper {
+    overflow: hidden;
+  }
 
-    .date_time-item {
-        border: 1px solid #331B0B;
-        border-radius: 10px;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 500;
-        padding: 20px;
-    }
+  .main_wrapper-top img,
+  .main_wrapper-bottom img {
+    max-width: unset;
+  }
 
-    .main_wrapper {
-        overflow: hidden;
-    }
+  .main_wrapper-bottom-text {
+    width: unset;
+    font-size: 18px;
+    top: unset;
+    bottom: 14%;
+  }
 
-    .main_wrapper-top img,
-    .main_wrapper-bottom img {
-        max-width: unset;
-    }
+  .main_wrapper-center svg {
+    scale: 1.7;
+    width: 100%;
+    height: 100%;
+  }
 
-    .main_wrapper-bottom-text {
-        width: unset;
-    }
+  .heart-icon img {
+    max-width: unset;
+  }
 
-    .main_wrapper-center svg {
-        scale: 0.55;
-    }
+  /*  */
 
-    .heart-icon img {
-        max-width: unset;
-    }
-
-    /*  */
-
-    #sPathmob,
-    .heart-iconmob {
-        display: block;
-    }
-
-
+  #sPathmob,
+  .heart-iconmob {
+    display: block;
+  }
 }
