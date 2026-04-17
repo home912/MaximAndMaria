@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Anticva';
+    src: url('Anticva-Regular.woff2') format('woff2'),
+        url('Anticva-Regular.woff') format('woff'),
+        url('Anticva-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
