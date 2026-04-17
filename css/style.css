@@ -461,6 +461,7 @@ svg {
     font-size: 18px;
     top: unset;
     bottom: 14%;
+    z-index: 1;
   }
 
   .main_wrapper-center svg {
