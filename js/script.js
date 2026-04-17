@@ -135,3 +135,34 @@ function updateTimer() {
 
 updateTimer();
 setInterval(updateTimer, 1000);
+
+
+
+$(document).ready(function() {
+    const $accordions = $(".accordion");
+
+    $accordions.on("click", function() {
+        const $this = $(this);
+        const isOpen = $this.hasClass("fs_active");
+
+        // Закрываем все
+        $accordions.each(function() {
+            const $acc = $(this);
+            $acc.removeClass("fs_active");
+            $acc.find(".arrow")?.removeClass("rotated");
+            $acc.find('.accordion svg path').css('stroke', '');
+            $acc.next().css('max-height', null);
+        });
+
+        // Если не была открыта — откроем
+        if (!isOpen) {
+            $this.addClass("fs_active");
+            const $arrow = $this.find(".arrow");
+            if ($arrow.length) {
+                $arrow.addClass("rotated");
+                $this.find('.accordion svg path').css('stroke', '#fff');
+            }
+            $this.next().css('max-height', $this.next()[0].scrollHeight + "px");
+        }
+    });
+});

@@ -18,6 +18,17 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Venski sad One';
+    src: url('../font3/VenskisadOne-Medium.woff2') format('woff2'),
+        url('../font3/VenskisadOne-Medium.woff') format('woff'),
+        url('../font3/VenskisadOne-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 
 * {
     box-sizing: border-box;
@@ -67,7 +78,7 @@ body {
 
 h2,
 .text {
-    font-family: 'Passions Conflict RUS' !important;
+    font-family: 'Venski sad One' !important;
     font-size: 70px !important;
     line-height: 30px;
     font-weight: 400;
@@ -169,7 +180,7 @@ svg {
     justify-content: center;
     align-items: center;
     font-weight: 500;
-    padding: 5px;
+    padding: 20px;
 }
 
 .date_time-item:last-child,
@@ -246,6 +257,86 @@ svg {
 .heart-iconmob {
     display: none;
 }
+
+
+/* Аккордеон */
+
+
+/* аккордеон */
+
+.help-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-accordion {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.accorderon-wrapper {
+  background: #f6f6f6;
+  border-radius: 20px;
+}
+
+.accordion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  border: solid 1px #006048;
+  background-color: #fff;
+  color: #006048;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none !important;
+  transition: background-color 0.4s;
+  border-radius: 20px;
+}
+
+.active,
+.accordion:hover {
+  color: #fff;
+  background-color: #006048;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: max-height 0.4s ease-out;
+}
+
+.arrow {
+  transition: 0.3s;
+  margin-right: 15px;
+}
+
+.accordion:hover svg {
+  margin-right: 10px;
+}
+
+.accordion svg path {
+  transition: 0.2s;
+}
+
+.accordion:hover svg path {
+  stroke: #fff;
+}
+
+.arrow.rotated {
+  transform: rotate(90deg);
+}
+
 
 @media (max-width: 768px) {
     body {
