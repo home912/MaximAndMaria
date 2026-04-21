@@ -407,6 +407,10 @@ svg {
   display: block;
 }
 
+.tango {
+    font-size: 40px;
+  }
+
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -457,8 +461,19 @@ svg {
     font-weight: 400;
   }
 
+  h2 {
+    font-family: "Venski sad One" !important;
+    font-size: 70px !important;
+    line-height: 74px;
+    font-weight: 400;
+  }
+
   div {
-    font-size: 25px;
+    font-size: 18px;
+  }
+
+  .tango {
+    font-size: 30px;
   }
 
   .date_time-item {
