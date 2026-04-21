@@ -96,6 +96,7 @@ h2,
 h2 {
   font-size: 100px !important;
   margin: 0.5em 0;
+  line-height: 74px;
 }
 
 .main_wrapper-bottom-text {
@@ -461,12 +462,6 @@ svg {
     font-weight: 400;
   }
 
-  h2 {
-    font-family: "Venski sad One" !important;
-    font-size: 70px !important;
-    line-height: 74px;
-    font-weight: 400;
-  }
 
   div {
     font-size: 18px;
