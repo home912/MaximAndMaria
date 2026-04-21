@@ -522,4 +522,9 @@ svg {
   .heart-iconmob {
     display: block;
   }
+
+  .gallery-item-info {
+    font-size: 10px;
+    padding: 10px 4px;
+  }
 }
