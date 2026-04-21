@@ -352,7 +352,7 @@ svg {
   overflow: clip;
   position: relative;
 }
-
+.gallery-item-info,
 .gallery-item::before {
   font-size: 12px;
   position: absolute;
@@ -363,18 +363,44 @@ svg {
   padding: 10px 10px;
   background: #0000008a;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.gallery-item-1::before {
-  content: "+7(913)466-78-56";
+.gallery-item::after {
+  font-size: 12px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  padding: 10px 10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 0 2px #000);
 }
 
-.gallery-item-2::before {
-  content: "+7(923)465-45-89";
+.gallery-item-1::after {
+  content: "Жених";
+}
+.gallery-item-2::after {
+  content: "Невеста";
+}
+.gallery-item-3::after {
+  content: "Ведущий";
 }
 
-.gallery-item-3::before {
-  content: "+7(985)456-12-56";
+.gallery-item-info {
+  display: flex;
+  gap: 5px;
+}
+
+.gallery-item-info img {
+  width: 15px;
+  height: 15px;
 }
 
 .gallery-item img {
