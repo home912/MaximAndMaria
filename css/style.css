@@ -409,12 +409,18 @@ svg {
 }
 
 .tango {
-    font-size: 40px;
-  }
+  font-size: 40px;
+}
 
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+
+  h2 {
+    font-size: 75px !important;
+    margin: 0.5em 0;
+    line-height: 74px;
   }
 
   .main_content {
@@ -461,7 +467,6 @@ svg {
     line-height: 30px;
     font-weight: 400;
   }
-
 
   div {
     font-size: 18px;
